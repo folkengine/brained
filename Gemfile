@@ -2,11 +2,16 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in brained.gemspec
 gemspec
 
 gem "rake", "~> 13.0"
 
-gem "rspec", "~> 3.0"
+gem "translit", "~> 0.1.5"
 
-gem "rubocop", "~> 1.7"
+group :development, :test do
+  gem "rubocop", "~> 1.7"
+end
+
+group :test do
+  gem "rspec", "~> 3.0"
+end
