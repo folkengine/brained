@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative "brained/name"
 require_relative "brained/string"
 require_relative "brained/version"
 

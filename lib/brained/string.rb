@@ -1,7 +1,7 @@
 require "translit"
 
 module Brained
-  # Brainded::String
+  # Brained::String
   #
   # The foundation Brained String only accepts ascii characters.
   #
@@ -10,7 +10,11 @@ module Brained
     attr_reader :value
 
     def initialize(value)
-      @value = String(String.wash(value.strip))
+      @value = String(wash(value.strip))
+    end
+
+    def wash(value)
+      Translit.convert(value, :english)
     end
 
     def to_s
@@ -19,10 +23,6 @@ module Brained
 
     def to_str
       value
-    end
-
-    def self.wash(value)
-      Translit.convert(value, :english)
     end
   end
 end
