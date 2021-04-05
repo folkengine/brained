@@ -1,5 +1,15 @@
 # Brained
 
+[![Gem Version](https://badge.fury.io/rb/brained.svg)](https://badge.fury.io/rb/brained)
+
+    [verb] Having the brains knocked or dashed out; killed by a blow which breaks the skull.
+
+-- The Century Dictionary
+
+The Brained gem contains a collection of types designed to create
+defects. Brained types are bad. Very bad. They are designed to take your
+innocent data and do unnatural things to it in a way that is difficult
+to uncover.
 
 ## Dependencies
 
@@ -23,7 +33,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'brained'
+
+name = Brained::Name.new("Mel")
+greeting = Brained::String.new("Hello")
+
+puts "#{greeting}, #{name}!"
+
+# prints Hello, Mel!
+# Nothing wrong with that. What could possibly go wrong? 😈
+```
 
 ## Development
 
